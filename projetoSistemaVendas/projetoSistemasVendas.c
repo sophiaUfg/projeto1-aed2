@@ -13,7 +13,8 @@ int main(){
         printf("2. Remover produto\n");
         printf("3. Buscar produto\n");
         printf("4. Listar produtos\n");
-        printf("5. Sair\n");
+        printf("5. Calcular altura da árvore\n");
+        printf("6. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
@@ -62,13 +63,16 @@ int main(){
                 listarProdutos(raiz);
                 break;
             case 5:
+                printf("A altura da árvore é: %d\n", altura(raiz));
+                break;
+            case 6:
                 printf("Saindo do sistema de vendas...\n");
                 break;
             default:
                 printf("Opcao invalida! Tente novamente.\n");
         }
 
-    } while (opcao != 5);
+    } while (opcao != 6);
 
     liberaArvore(raiz);
 

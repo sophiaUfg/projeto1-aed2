@@ -16,5 +16,6 @@ Node* buscar(Node* raiz, int codigo);
 void listarProdutos(Node* raiz);
 void gerenciarEstoque(Node* raiz, int codigo, int quantidade);
 void liberaArvore(Node* raiz);
+void altura(Node* no);
 
 #endif
