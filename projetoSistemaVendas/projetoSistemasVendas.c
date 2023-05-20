@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "produto.h"
 #include "avl.h"
+#include "testes.h"
 
 int main(){
     Node *raiz = NULL;
@@ -14,7 +15,9 @@ int main(){
         printf("3. Buscar produto\n");
         printf("4. Listar produtos\n");
         printf("5. Calcular altura da árvore\n");
-        printf("6. Sair\n");
+        printf("6. Teste de inserção\n");
+        printf("7. Teste de remoção\n");
+        printf("8. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
@@ -66,13 +69,19 @@ int main(){
                 printf("A altura da árvore é: %d\n", altura(raiz));
                 break;
             case 6:
+                listarProdutos(testeInserir());
+                break;
+            case 7:
+                listarProdutos(testeRemover());
+                break;
+            case 8:
                 printf("Saindo do sistema de vendas...\n");
                 break;
             default:
                 printf("Opcao invalida! Tente novamente.\n");
         }
 
-    } while (opcao != 6);
+    } while (opcao != 8);
 
     liberaArvore(raiz);
 
