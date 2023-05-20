@@ -67,17 +67,17 @@ int main(){
                 listarProdutos(raiz);
                 break;
             case 5:
-               // printf("A altura da árvore é: %d\n", altura(raiz));
-               printf("A altura da árvore é");//Corrige depois
+               printf("A altura da árvore é: %d\n", altura(raiz));
+               //printf("A altura da árvore é");//Corrige depois
                 break;
             case 6:
-                insercaoMassa(&raiz, 10000); 
+                insercaoMassa(&raiz, 7000); 
             break;
             case 7:
-                buscaMassa(raiz, 10000); 
+                buscaMassa(raiz, 6000); 
                 break;
             case 8:
-                remocaoMassa(&raiz, 10000); 
+                remocaoMassa(&raiz, 4000); 
                 break;
             case 9:
                 printf("Saindo do sistema de vendas...\n");

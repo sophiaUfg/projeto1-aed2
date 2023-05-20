@@ -199,30 +199,45 @@ Node* remover(Node *raiz, int codigo){
     }
 }
 
+//Recebe a raiz e quantidade e insere valores em massa na arvore
 void insercaoMassa(Node** raiz,int quantidade) {
+    //Loop de inserção
     for (int i = 1; i <= quantidade; i++) {
+        //Instância de produto e simulação de valores
         Produto novoProduto;
         novoProduto.codigo = i;
         novoProduto.preco = i;
         novoProduto.quantidadeEstoque = i;
-        novoProduto.nome[0]= (char) i;
+        novoProduto.nome[0]= 'T';
+        novoProduto.nome[1]= 'E';
+        novoProduto.nome[2]= 'S';
+        novoProduto.nome[3]= 'T';
+        novoProduto.nome[4]= 'E';
+        novoProduto.nome[5]= (char)i;
+        //Inserção na árvore
         *raiz = insert(*raiz, novoProduto);
+        
     }
 }
 
+//Recebe a raiz e quantidade e busca valores em massa na arvore
 void buscaMassa(Node* raiz, int quantidade) {
     for (int i = 1; i <= quantidade; i++) {
+        //Busca valores na árvore
         Node* resultado = buscar(raiz, i);
         if (resultado != NULL) {
-            printf("Valor encontrado: %d\n", resultado->produto.codigo);
+            printf("Valor código: %d\n", resultado->produto.codigo);
+            
         } else {
             printf("Valor nao encontrado: %d\n", i);
         }
     }
 }
 
+//Recebe a raiz e quantidade e remove valores em massa na arvore
 void remocaoMassa(Node** raiz,int quantidade) {
     for (int i = 1; i <= quantidade; i++) {
+        printf("Removendo produto de codigo: %d \n", i);
         *raiz = remover(*raiz, i);
     }
 }

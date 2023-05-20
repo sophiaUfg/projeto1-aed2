@@ -14,7 +14,7 @@ Node* remover(Node* raiz, int codigo);
 Node* buscar(Node* raiz, int codigo);
 void listarProdutos(Node* raiz);
 void liberaArvore(Node* raiz);
-void altura(Node* no);
+int altura(Node* no);
 void insercaoMassa(Node** raiz, int quantidade);
 void buscaMassa(Node* raiz, int quantidade);
 void remocaoMassa(Node** raiz, int quantidade);
