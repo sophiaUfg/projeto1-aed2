@@ -199,6 +199,34 @@ Node* remover(Node *raiz, int codigo){
     }
 }
 
+void insercaoMassa(Node** raiz,int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        Produto novoProduto;
+        novoProduto.codigo = i;
+        novoProduto.preco = i;
+        novoProduto.quantidadeEstoque = i;
+        novoProduto.nome[0]= (char) i;
+        *raiz = insert(*raiz, novoProduto);
+    }
+}
+
+void buscaMassa(Node* raiz, int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        Node* resultado = buscar(raiz, i);
+        if (resultado != NULL) {
+            printf("Valor encontrado: %d\n", resultado->produto.codigo);
+        } else {
+            printf("Valor nao encontrado: %d\n", i);
+        }
+    }
+}
+
+void remocaoMassa(Node** raiz,int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        *raiz = remover(*raiz, i);
+    }
+}
+
 void listarProdutos(Node *raiz){
     if(raiz){
         listarProdutos(raiz->left);

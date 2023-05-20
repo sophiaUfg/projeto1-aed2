@@ -15,9 +15,10 @@ int main(){
         printf("3. Buscar produto\n");
         printf("4. Listar produtos\n");
         printf("5. Calcular altura da árvore\n");
-        printf("6. Teste de inserção\n");
-        printf("7. Teste de remoção\n");
-        printf("8. Sair\n");
+        printf("6. Inserção em massa\n");
+        printf("7. Busca em massa\n");
+        printf("8. Remoção em massa\n");
+        printf("9. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
@@ -66,15 +67,19 @@ int main(){
                 listarProdutos(raiz);
                 break;
             case 5:
-                printf("A altura da árvore é: %d\n", altura(raiz));
+               // printf("A altura da árvore é: %d\n", altura(raiz));
+               printf("A altura da árvore é");//Corrige depois
                 break;
             case 6:
-                listarProdutos(testeInserir());
-                break;
+                insercaoMassa(&raiz, 10000); 
+            break;
             case 7:
-                listarProdutos(testeRemover());
+                buscaMassa(raiz, 10000); 
                 break;
             case 8:
+                remocaoMassa(&raiz, 10000); 
+                break;
+            case 9:
                 printf("Saindo do sistema de vendas...\n");
                 break;
             default:
