@@ -30,6 +30,9 @@ Node* insert(Node *raiz, int item){
     return raiz;
 }
 
+
+
+
 /*  funcao alternativa para inserir na arvore, nao recursiva
 void insert2(Node **raiz, int item){ //utiliza o ponteiro para ponteiro da raiz
     Node *aux = *raiz; 
@@ -205,6 +208,29 @@ void printPosfixo(Node *raiz){
     }
 }
 
+void insercaoMassa(Node** raiz, int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        *raiz = insert(*raiz, i);
+    }
+}
+
+void buscaMassa(Node* raiz, int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        Node* resultado = buscar(raiz, i);
+        if (resultado != NULL) {
+            printf("Valor encontrado: %d\n", resultado->item);
+        } else {
+            printf("Valor nao encontrado: %d\n", i);
+        }
+    }
+}
+
+void remocaoMassa(Node** raiz, int quantidade) {
+    for (int i = 1; i <= quantidade; i++) {
+        *raiz = remover(*raiz, i);
+    }
+}
+
 
 int main(){
     int opcao, valor;
@@ -212,7 +238,7 @@ int main(){
     Node *busca;
     
     do{
-        printf("\n0-Sair\n1-Inserir\n2-Imprimir\n3-Buscar\n4-Calcular altura\n5-Tamanho\n6-Quantidade de folhas\n7-Remover\n");
+        printf("\n0-Sair\n1-Inserir\n2-Imprimir\n3-Buscar\n4-Calcular altura\n5-Tamanho\n6-Quantidade de folhas\n7-Remover\n8-Insercao em massa\n9-Busca em massa\n10-Remocao em massa\n");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -260,6 +286,15 @@ int main(){
             printf("Digite valor a ser removido:\n");
             scanf("%d", &valor);
             raiz = remover(raiz, valor);
+            break;
+         case 8:
+            insercaoMassa(&raiz, 10000); 
+            break;
+        case 9:
+            buscaMassa(raiz, 10000); 
+            break;
+        case 10:
+            remocaoMassa(&raiz, 10000); 
             break;
         default:
             if(opcao != 0)
