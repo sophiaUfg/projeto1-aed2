@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "produto.h"
 #include "avl.h"
-#include "testes.h"
 
 int main(){
     Node *raiz = NULL;
