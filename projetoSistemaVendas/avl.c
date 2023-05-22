@@ -226,7 +226,7 @@ void buscaMassa(Node* raiz, int quantidade) {
         //Busca valores na árvore
         Node* resultado = buscar(raiz, i);
         if (resultado != NULL) {
-            printf("Valor código: %d\n", resultado->produto.codigo);
+            printf("Valor codigo: %d\n", resultado->produto.codigo);
             
         } else {
             printf("Valor nao encontrado: %d\n", i);
@@ -245,7 +245,7 @@ void remocaoMassa(Node** raiz,int quantidade) {
 void listarProdutos(Node *raiz){
     if(raiz){
         listarProdutos(raiz->left);
-        printf("Código: %d, Nome: %s, Preco: %.2f, Quantidade em Estoque: %d\n",raiz->produto.codigo, raiz->produto.nome, raiz->produto.preco, raiz->produto.quantidadeEstoque);
+        printf("Codigo: %d, Nome: %s, Preco: %.2f, Quantidade em Estoque: %d\n",raiz->produto.codigo, raiz->produto.nome, raiz->produto.preco, raiz->produto.quantidadeEstoque);
         listarProdutos(raiz->right);
     }
 }

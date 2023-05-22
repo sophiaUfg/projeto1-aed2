@@ -13,10 +13,10 @@ int main(){
         printf("2. Remover produto\n");
         printf("3. Buscar produto\n");
         printf("4. Listar produtos\n");
-        printf("5. Calcular altura da árvore\n");
-        printf("6. Inserção em massa\n");
+        printf("5. Calcular altura da arvore\n");
+        printf("6. Insercao em massa\n");
         printf("7. Busca em massa\n");
-        printf("8. Remoção em massa\n");
+        printf("8. Remocao em massa\n");
         printf("9. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
@@ -53,7 +53,7 @@ int main(){
                 Node* resultado = buscar(raiz, codigo);
                 if (resultado) {
                     printf("Produto encontrado:\n");
-                    printf("Código: %d, Nome: %s, Preco: %.2f, Quantidade em Estoque: %d\n",
+                    printf("Codigo: %d, Nome: %s, Preco: %.2f, Quantidade em Estoque: %d\n",
                            resultado->produto.codigo, resultado->produto.nome, resultado->produto.preco,
                            resultado->produto.quantidadeEstoque);
                 } else {
@@ -66,7 +66,7 @@ int main(){
                 listarProdutos(raiz);
                 break;
             case 5:
-               printf("A altura da árvore é: %d\n", altura(raiz));
+               printf("A altura da arvore e: %d\n", altura(raiz));
                //printf("A altura da árvore é");//Corrige depois
                 break;
             case 6:
@@ -85,7 +85,7 @@ int main(){
                 printf("Opcao invalida! Tente novamente.\n");
         }
 
-    } while (opcao != 8);
+    } while (opcao != 9);
 
     liberaArvore(raiz);
 
